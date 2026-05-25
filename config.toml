@@ -1,10 +1,8 @@
 delay = 300
 changerate = 0.0087
 download_photos = true
-message = """
-$id $productName
-$productURL ¥$price (USD $priceCurrency)
-"""
+message = "$productName - $price - $productURL"
+
 
 [[searches]]
 keywords = "ポケットモンスター 緑 GB"
