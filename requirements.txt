@@ -3,3 +3,5 @@ pyTelegramBotAPI~=4.5.1
 python-dotenv~=0.20.0
 requests~=2.27.1
 cryptography~=37.0.2
+
+flask
