@@ -29,3 +29,7 @@ price_max = 11000
 [[searches]]
 keywords = "ゼルダ ディスクシステム"
 price_max = 7000
+
+[telegram]
+token = "8937876728:AAEYasoXKcmCMiQn3308fjCMcLyrgak4JJQ
+chat_id = 8258920049
