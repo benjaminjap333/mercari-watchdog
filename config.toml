@@ -1,6 +1,6 @@
-delay = 60
+delay = 180
 changerate = 0.0087
-downloadphotos = true
+download_photos = true
 message = """
 $id $productName
 $productURL ¥$price (USD $priceCurrency)
