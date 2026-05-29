@@ -1,5 +1,8 @@
 import telebot
+from telebot import apihelper
 
+# On utilise un proxy Cloudflare pour contourner le blocage de Render
+apihelper.proxy = {'https': 'http://104.26.13.197:443'}
 
 class TelegramClient:
     def __init__(self, bot, chat_id: str, download_photos: bool):
@@ -7,9 +10,7 @@ class TelegramClient:
         self.chat_id = chat_id
         self.download_photos = download_photos
 
-
 def new_telegram_client(token: str, chat_id: str, download_photos: bool):
     bot = telebot.TeleBot(token, parse_mode='Plain')
     client = TelegramClient(bot, chat_id, download_photos)
-
     return client
