@@ -9,7 +9,7 @@ class TelegramClient:
 
 
 def new_telegram_client(token: str, chat_id: str, download_photos: bool):
-    bot = telebot.TeleBot(token, parse_mode=None)
+    bot = telebot.TeleBot(token, parse_mode='Plain')
     client = TelegramClient(bot, chat_id, download_photos)
 
     return client
