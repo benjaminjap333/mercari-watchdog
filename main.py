@@ -21,9 +21,10 @@ def run_web_server():
 def run_bot():
     print('Starting mercari-watchdog...')
     cfg = config.load()
-    telegram_client = telegram.new_telegram_client(cfg.telegram_token, cfg.telegram_chat_id, cfg.download_photos)
-    coordinator.start(cfg.searches, cfg.delay, cfg.msg_tpl, cfg.change_rate, telegram_client)
-
+    telegram_client = telegram.new_telegram_client(cfg.telegram_token, cfg.telegram_chat_id, False)
+    simple_msg = "Nouveau produit trouve : {title} - {price}Yen - {url}"
+    coordinator.start(cfg.searches, cfg.delay, simple_msg, cfg.change_rate, telegram_client)
+    
 if __name__ == "__main__":
     # On lance le serveur web dans un fil secondaire pour que Render reste content
     t = threading.Thread(target=run_web_server)
