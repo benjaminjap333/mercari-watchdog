@@ -128,8 +128,7 @@ def send_to_telegram(scraped, msg_tpl: str, telegram_client: telegram.TelegramCl
             else:
                 d['priceCurrency'] = 0
 
-            src = Template(msg_tpl)
-            formatted = src.substitute(d)
+            formatted = f"Nouveau produit trouve : {d['productName']} - {d['price']} Yen\n{d['productURL']}"
 
             try:
                 if telegram_client.download_photos:
